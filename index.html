@@ -8,26 +8,44 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-        .profile-photo {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 15px;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
-            padding: 20px;
+            padding: 40px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         .profile-section {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .profile-photo {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
         }
         h2 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -40,20 +58,11 @@
                 <p>Short bio about yourself, your interests, and background.</p>
             </div>
         </div>
-    </div>
-    
-    <div class="container">
+        
         <h2>Education</h2>
         <ul>
             <li><strong>Degree:</strong> Your Degree (Year) - University Name</li>
             <li><strong>Other Degree:</strong> Your Degree (Year) - University Name</li>
-        </ul>
-    
-    <div class="container">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Degree:</strong> Electronic and Information Engineering MEng (2021-25) - Imperial College London</li>
-            <li><strong>A Levels:</strong> 4A*s in Mathematics, Further Mathematics, Physics and Chemistry - Cardiff Sixth Form College</li>
         </ul>
         
         <h2>Publications</h2>
@@ -64,10 +73,14 @@
         
         <h2>Experience</h2>
         <ul>
-            <li><strong>Job Title:</strong> Software/Electronic Engineer Intern, Science and Facilities Council, UKRI (July - Sept 2023)</li>
+            <li><strong>Job Title:</strong> Company Name (Years)</li>
+            <li><strong>Another Job Title:</strong> Another Company (Years)</li>
         </ul>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 </body>
 </html>
