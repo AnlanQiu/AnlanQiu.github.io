@@ -27,21 +27,40 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      /* Removed flex-wrap to force a single-line layout */
+      /* For desktop, keep items in a row */
     }
     .profile-photo {
       width: 100%;
-      max-width: 300px; /* Adjust this value as needed */
+      max-width: 300px; /* Adjust as needed */
       height: auto;
       border-radius: 8px;
     }
     .profile-text {
-      flex: 1; /* This makes the text container take up remaining space */
+      flex: 1;
+    }
+    .profile-links {
+      margin-top: 15px;
+    }
+    .profile-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077b5; /* You can change this to match your design */
     }
     h2 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
       margin-top: 20px;
+    }
+    /* Responsive adjustments for mobile devices */
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center;
+      }
+      .profile-text {
+        text-align: center; /* Optionally center the text */
+      }
     }
   </style>
 </head>
@@ -57,24 +76,26 @@
         <p>
           I am currently working on my Masters project. I am designing a 3D data augmentation pipeline that relocates objects within a 3D point cloud scene to new feasible positions based on user text prompts.
         </p>
+        <!-- Profile links -->
+        <div class="profile-links">
+          <a href="https://www.linkedin.com/in/anlan-qiu-a989a9345/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AnlanQiu" target="_blank">GitHub</a>
+          <!-- <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank">Google Scholar</a> -->
+        </div>
       </div>
     </div>
 
     <h2>Education</h2>
     <ul>
       <li><strong>Degree:</strong> Electronic and Information Engineering MEng - Imperial College London (2021-25)</li>
-      <li><strong>A Levels:</strong> 4A*s in Mathematics, Further Mathematics, Physics and Chemistry - Cardiff Sixth Form (2019-21)</li>
+      <li><strong>A Levels:</strong> 4A*s in Mathematics, Further Mathematics, Physics and Chemistry - Cardiff Sixth Form College (2019-21)</li>
     </ul>
 
     <h2>Publications</h2>
     <table class="pub_table">
       <tbody>
         <tr>
-          <td class="pub_td1">
-            <img src="./files/Hypo3D.png" class="papericon" alt="Hypo3D">
-          </td>
           <td class="pub_td2">
-            <br>
             <b>Hypo3D: Exploring Hypothetical Reasoning in 3D</b>
             <br>
             Ye Mao, Weixun Luo, Junpeng Jing, <b>Anlan Qiu</b>, and Krystian Mikolajczyk
@@ -87,11 +108,7 @@
           </td>
         </tr>
         <tr>
-          <td class="pub_td1">
-            <img src="./files/MatchStereo.png" class="papericon" alt="Match Stereo Videos">
-          </td>
           <td class="pub_td2">
-            <br>
             <b>Match Stereo Videos via Bidirectional Alignment</b>
             <br>
             Junpeng Jing, Ye Mao, <b>Anlan Qiu</b> and Krystian Mikolajczyk
@@ -120,4 +137,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
